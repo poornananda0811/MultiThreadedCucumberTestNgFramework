@@ -1,0 +1,6 @@
+parallel\AccountsPageSteps.class
+parallel\GooglePageSteps.class
+parallel\YouTubePageSteps.class
+parallel\LoginPageSteps.class
+parallel\ParallelRun.class
+parallel\ApplicationHooks.class

@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: parallel.ParallelRun
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 106.306 s <<< FAILURE! - in parallel.ParallelRun
+runScenario(parallel.ParallelRun)  Time elapsed: 88.964 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[My account] - My Store> but was:<[Login] - My Store>
+
+runScenario(parallel.ParallelRun)  Time elapsed: 89.207 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[My account - My Stor]e> but was:<[Error 406 - Not Acceptabl]e>
+
+runScenario(parallel.ParallelRun)  Time elapsed: 89.497 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[My account] - My Store> but was:<[Login] - My Store>
+
+runScenario(parallel.ParallelRun)  Time elapsed: 89.669 s  <<< FAILURE!
+java.lang.AssertionError
+
+runScenario(parallel.ParallelRun)  Time elapsed: 92.714 s  <<< FAILURE!
+java.lang.AssertionError
+

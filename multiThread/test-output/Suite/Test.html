@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 14 22:50:03 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>143 seconds (143580 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with correct credentials", "Optional[Login Page feature]"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at parallel.LoginPageSteps.page_title_should_be(LoginPageSteps.java:32)
+	at ?.page title should be &quot;My account - My Store&quot;(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/LoginPage.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2145422593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2145422593'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at parallel.LoginPageSteps.page_title_should_be(LoginPageSteps.java:32)
+	at ?.page title should be &quot;My account - My Store&quot;(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/LoginPage.feature:18)
+</pre></div></td>
+<td>96</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Page title", "Optional[Login Page feature]"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at parallel.LoginPageSteps.page_title_should_be(LoginPageSteps.java:32)
+	at ?.page title should be &quot;Login - My Store_&quot;(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/LoginPage.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1833244526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1833244526'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at parallel.LoginPageSteps.page_title_should_be(LoginPageSteps.java:32)
+	at ?.page title should be &quot;Login - My Store_&quot;(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/LoginPage.feature:6)
+</pre></div></td>
+<td>97</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts section customer care contact", "Optional[Account Page Feature]"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1217576683", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1217576683'><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:27)
+</pre></div></td>
+<td>98</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts section count", "Optional[Account Page Feature]"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace792963943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace792963943'><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:16)
+</pre></div></td>
+<td>98</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts page title", "Optional[Account Page Feature]"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace654035385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace654035385'><pre>org.junit.ComparisonFailure: expected:&lt;[My account] - My Store&gt; but was:&lt;[Login] - My Store&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:39)
+	at ?.user is on Accounts page(file:///F:/MultiThreadedCucumberTestNgFramework/multiThread/src/test/resources/parallel/AccountsPage.feature:10)
+</pre></div></td>
+<td>99</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Google Page title", "Optional[Google Page feature]"</td>
+<td></td>
+<td>47</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forget Password Link", "Optional[Login Page feature]"</td>
+<td></td>
+<td>63</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Youtube Page title", "Optional[Youtube Page feature]"</td>
+<td></td>
+<td>107</td>
+<td>parallel.ParallelRun@29647f75</td></tr>
+</table><p>
+</body>
+</html>
